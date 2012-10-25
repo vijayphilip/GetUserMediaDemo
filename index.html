@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo of getUserMedia & LocalStorage</title>
+    <link rel="stylesheet" href="style.css"/> 
+</head>
+<body>
+    <div class="wrapper">
+        <br>
+        <p>
+            This is a demo on the chrome browser for capturing a snapshot from a web camera or a local image file and storing it in localstorage for retrieval. 
+        <br>
+            Taking a snapshot or loading the local file automatically saves it to localstorage.
+        </p>
+        <hr />
+        <div class="box">
+            <div>
+                <h4>Camera</h4>
+                <video id="stream" autoplay></video>
+                <canvas id="canvasStream" style="display:none;"></canvas>
+                <br>
+                <button id="enablecam" style="display:none;">Enable Camera</button>       
+            </div>
+            <div>
+                <h4>Camera Snapshot</h4>
+                <img id="snapshot"></img>
+                 <br>
+                <button id="takesnap" disabled=true>Take a Camera Snapshot</button>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <h4>Local File Image</h4>
+                <img id="localimagefile"></img>
+                <br>
+                <input type="file" id="loadfromlocalfile" name="Load image from Drive" />
+            </div>
+            <div>
+                <h4>Load From LocalStorage - Camera Snapshot / Local File Image</h4>
+                <img id="localstoragesnapshot"></img>
+                <br>
+                <button id="loadfromlocalstoragesnap">Load Camera Snapshot</button>
+                <button id="loadfromlocalstoragefile">Load Local File Image </button>
+                <button id="deletefromlocalstorage">Delete All </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
